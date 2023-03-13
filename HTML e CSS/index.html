@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Front-end</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    function open_menu() {
+      document.querySelector('.nav').classList.add('active');
+    }
+  </script>
+</head>
+<body>
+  <body>
+    <header>
+      <div class="container">
+        <button class="topnav" onclick="open_menu()"></button>
+
+        <ul class="nav">
+          <li><a href="https://www.w3schools.com/html">HTML</a></li>
+          <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
+          <li><a href="https://www.w3schools.com/js/default.asp">JavaScript</a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="container" id="root"></div>
+    <section class="container">
+      <h1 class="title"># 1 Front-end</h1>
+
+      <p class="sub-title">O desenvolvimento front-end da web é o desenvolvimento da interface gráfica do usuário de um site, por meio do uso de HTML, CSS e JavaScript, para que os usuários possam visualizar e interagir com aquele site.</p>
+      <a href="https://en.wikipedia.org/wiki/Front-end_web_development">Saiba mais</a>
+
+      <div class="template">
+        <div class="repeater-item">
+          <h4>HTML</h4>
+          <p>HTML é uma linguagem de marcação utilizada na construção de páginas na Web.</p>
+          <a href="https://www.w3schools.com/html">Saiba mais</a>
+        </div>
+
+        <div class="repeater-item">
+          <h4>CSS</h4>
+          <p>HTML é uma linguagem de marcação utilizada na construção de páginas na Web.</p>
+          <a href="https://www.w3schools.com/css/default.asp">Saiba mais</a>
+        </div>
+
+        <div class="repeater-item">
+          <h4>JavaScript</h4>
+          <p>HTML é uma linguagem de marcação utilizada na construção de páginas na Web.</p>
+          <a href="https://www.w3schools.com/js/default.asp">Saiba mais</a>
+        </div>
+        
+      </div>
+
+      <img src="./img-html.jpg" alt="HTML">
+        
+    </section>
+        
+        
+  <footer>
+    <div class="container">
+      <p>Um DOM virtual é uma representação JavaScript do Document Object Model usado em estruturas Web declarativas como React, Vue.js</p>
+    </div>
+  </footer>
+
+  <script>
+    function open_menu() {
+      document.querySelector('.nav').classList.add('active');
+    }
+
+    let rootElement = document.getElementById('root');
+
+    function time() {
+      const currentTime = new Date().toLocaleTimeString();
+
+      const element = `
+        <div>
+          <h1>Seja Bem Vindo!!!</h1>
+          <h2>Horário: ${currentTime}</h2>
+        </div>
+      `
+
+      rootElement.innerHTML = element;
+    }
+
+    setInterval(time, 1000);
+
+  </script>
+</body>
+</html>
